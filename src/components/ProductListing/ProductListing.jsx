@@ -5,6 +5,7 @@ import { Sidebar } from "../Sidebar";
 import { Sort } from "../Sort";
 import { filterData } from "./DataFilters";
 import { sortData } from "./DataSort";
+import { Header } from "../Header";
 
 export const ProductListing = () => {
   const { state } = useStateContext();
@@ -13,6 +14,7 @@ export const ProductListing = () => {
   const getFilteredData = filterData(state, sortedData);
   return (
     <>
+      <Header />
       <div className="wrapper-fluid ">
         <div className="pageLayout">
           <Sidebar />
